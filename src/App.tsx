@@ -6,7 +6,7 @@ import ForumComponent from './ForumComponent/ForumComponent'
 
 function App() {
   return (
-    <div className="d-flex  justify-content-center align-items-center bg-dark text-white">
+    <div className="d-flex justify-content-center align-items-center text-white">
       <ForumComponent />
     </div>
     
