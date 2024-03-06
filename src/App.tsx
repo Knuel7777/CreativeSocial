@@ -2,7 +2,7 @@ import {} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { ForumPage } from "./Pages/Forum";
-import { LoginPage } from "./Pages/Login";
+import LoginPage from "./Pages/Login.tsx";
 import  ProfilePage  from "./components/ProfileComponent/ProfilePage.tsx";
 
 

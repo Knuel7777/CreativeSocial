@@ -1,0 +1,33 @@
+
+.containerForm {
+    padding: 45px 45px 10px 45px;
+
+    
+  }
+
+.bodybg {
+    background-color: black;
+
+}
+  
+  .containerForm input,
+  .containerForm label,
+  .containerForm button {
+    color: black;
+  }
+  
+  .containerForm button {
+    background-color: #FE4801;
+    border-color: #FE4801;
+    padding: 5px 5px;
+    width: 100%;
+  }
+
+
+  .containerForm button:hover {
+    background-color: black; 
+    color: #ffffff; 
+    border-color: white;
+  }
+  
+  
