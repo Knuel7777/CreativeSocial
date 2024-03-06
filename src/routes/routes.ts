@@ -1,6 +1,6 @@
 import { ForumPage } from '../Pages/Forum';
 import { LoginPage } from '../Pages/Login';
-import { ProfilePage } from '../Pages/Profile';
+import ProfilePage from '../components/ProfileComponent/ProfilePage';
 
 const routes = [
         {

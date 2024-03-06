@@ -1,6 +1,7 @@
+/*
 import React, { useState } from 'react';
-import { UserProfile } from '../components/ProfileComponent/profileTypes';
-import '../Profile.css'
+import { UserProfile } from './profileTypes';
+import './Profile.css';
 
 interface ProfileProps {
   user: UserProfile;
@@ -86,3 +87,4 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
 };
 
 export default Profile;
+*/

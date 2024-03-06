@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { ForumPage } from "./Pages/Forum";
 import { LoginPage } from "./Pages/Login";
-import { ProfilePage } from "./Pages/Profile";
+import  ProfilePage  from "./components/ProfileComponent/ProfilePage.tsx";
+
+
 import NavbarComponent from "./components/NavbarComponent/NavbarComponent";
 
 function App() {
@@ -22,3 +24,4 @@ function App() {
 }
 
 export default App;
+ 
