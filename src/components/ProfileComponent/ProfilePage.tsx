@@ -18,7 +18,6 @@ const ProfilePage: React.FC = () => {
 
   return (
     <div className="profile-page">
-      <h1 className="Main">Perfil de Usuario</h1>
       <Profile user={currentUser} onUserDataChange={handleUserDataChange} />
     </div>
   );
