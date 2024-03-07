@@ -14,7 +14,7 @@ function NavbarComponent() {
       />
       <ul className="d-flex justify-content-between align-items-center ">
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/login">Inicio</Link>
         </li>
         <li>
           <Link to="/profile">Perfil</Link>

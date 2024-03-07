@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UserProfile } from '../components/ProfileComponent/profileTypes';
-import '../Profile.css'
+import '../components/ProfileComponent/Profile.css';
 
 interface ProfileProps {
   user: UserProfile;
@@ -13,7 +13,7 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
   const [newBio, setNewBio] = useState(user.editableBio || '');
   const [newAvatar, setNewAvatar] = useState(user.editableAvatar || '');
   const [newAge, setNewAge] = useState(user.age || 0);
-  const [newcarrera, setNewcarrera] = useState(user.carrera || '');
+  const [newCareer, setNewCareer] = useState(user.career || 'Desing web'); 
 
   const handleUserDataChange = () => {
     setEditing(false);
@@ -24,7 +24,7 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
         bio: newBio,
         avatar: newAvatar,
         age: newAge,
-        carrera: newcarrera,
+        career: newCareer,
         editableName: newName,
         editableBio: newBio,
         editableAvatar: newAvatar,
@@ -64,12 +64,18 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
             value={newAge}
             onChange={(e) => setNewAge(parseInt(e.target.value, 10))}
           />
-          <input
-            type="text"
-            placeholder="Carrera"
-            value={newcarrera}
-            onChange={(e) => setNewcarrera(e.target.value)}
-          />
+          <label htmlFor="career">Carrera:</label>
+          <select
+            id="career"
+            value={newCareer}
+            onChange={(e) => setNewCareer(e.target.value)}
+          >
+            <option value="Desing web">Desing web</option>
+            <option value="Desarrollo web Frond End">Desarrollo web Frond End</option>
+            <option value="Robotica I">Robotica I</option>
+            <option value="Fotografía Básica">Fotografía Básica</option>
+            <option value="Edición de Video">Edición de Video</option>
+          </select>
           <button onClick={handleUserDataChange}>Guardar</button>
         </>
       ) : (
@@ -77,7 +83,7 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
           <h2>{user.name}</h2>
           <p>{user.bio}</p>
           <p>Edad: {user.age}</p>
-          <p>Carrera: {user.carrera}</p>
+          <p>Carrera: {user.career}</p>
           <button onClick={() => setEditing(true)}>Editar Perfil</button>
         </>
       )}
@@ -86,3 +92,4 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
 };
 
 export default Profile;
+
