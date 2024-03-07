@@ -1,0 +1,18 @@
+
+button {
+    background-color: #FE4801;
+    color: white;
+    padding: 8px 8px;
+    cursor: pointer;
+    border: none;
+    width: 50%;
+    border-radius: 20px !important;
+}
+
+button:hover {
+    transition: transform 0.6s ease;
+    transform: translatey(5px);
+    
+}
+
+
