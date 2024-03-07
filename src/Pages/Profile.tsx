@@ -11,7 +11,6 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
   const [editing, setEditing] = useState(false);
   const [newName, setNewName] = useState(user.editableName || "");
   const [newBio, setNewBio] = useState(user.editableBio || "");
-  const [newAvatar, setNewAvatar] = useState(user.editableAvatar || "");
   const [newAge, setNewAge] = useState(user.age || 0);
   const [newCareer, setNewCareer] = useState(user.career || "Desing web");
 
@@ -22,12 +21,10 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
         ...user,
         name: newName,
         bio: newBio,
-        avatar: newAvatar,
         age: newAge,
         career: newCareer,
         editableName: newName,
         editableBio: newBio,
-        editableAvatar: newAvatar,
       });
     }
   };
@@ -50,12 +47,6 @@ const Profile: React.FC<ProfileProps> = ({ user, onUserDataChange }) => {
             placeholder="Nueva Descripción"
             value={newBio}
             onChange={(e) => setNewBio(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Nueva URL de Avatar"
-            value={newAvatar}
-            onChange={(e) => setNewAvatar(e.target.value)}
           />
           <input
             type="number"
